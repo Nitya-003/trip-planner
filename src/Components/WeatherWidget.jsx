@@ -88,7 +88,7 @@ const WeatherWidget = () => {
     };
 
     fetchWeather();
-  }, [selectedCity]);
+  }, [selectedCity, demoMode]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

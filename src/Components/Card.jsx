@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { FaRupeeSign, FaMapMarkerAlt, FaRegCalendarAlt, FaRegThumbsDown } from 'react-icons/fa';
-import { useTheme } from '../contexts/ThemeContext';
 import { useInterested } from '../contexts/InterestedContext';
 import { toast } from 'react-toastify';
 
 const Card = ({ tour, removeTour, lockItem, unlockItem, locked, presence }) => {
-  const { theme } = useTheme();
   const { addToInterested } = useInterested(); 
   const [readmore, setReadmore] = useState(false);
 
@@ -19,7 +17,6 @@ const Card = ({ tour, removeTour, lockItem, unlockItem, locked, presence }) => {
         src={tour.image}
         alt={tour.name}
         className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
-        role="img"
         aria-label={tour.name}
       />
 

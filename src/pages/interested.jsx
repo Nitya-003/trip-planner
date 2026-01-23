@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInterested } from "../contexts/InterestedContext";
 import { useTheme } from "../contexts/ThemeContext";
 import Card from "../Components/Card";
-import { Heart, Search, MapPin, Star, Sun, Moon } from "lucide-react";
+import { Heart, Search, MapPin, Star} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Interested = () => {
   const { interestedTours, removeFromInterested } = useInterested();
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const navigate = useNavigate();
   
   const isDarkMode = theme === 'dark';

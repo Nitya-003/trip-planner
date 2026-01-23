@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { signOut, updateProfile } from "firebase/auth";
 import { auth, db } from "../firebase";
 import { toast } from "react-toastify";
-import { FaUser, FaSignOutAlt, FaEdit, FaSave, FaTimes } from "react-icons/fa";
+import { FaSignOutAlt, FaEdit, FaSave, FaTimes } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import { doc, onSnapshot, setDoc } from "firebase/firestore";
 
