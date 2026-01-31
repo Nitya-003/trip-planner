@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { Loader2 } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
 import { useTheme } from "../contexts/ThemeContext";
@@ -316,9 +316,8 @@ export default function Signup({ setIsLoggedIn }) {
             </p>
           </form>
         </div>
-      </div>
-
-      <ToastContainer position="bottom-left" autoClose={3000} theme="colored" />
+			</div>
+			
     </div>
   );
 }

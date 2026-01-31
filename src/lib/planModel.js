@@ -11,6 +11,5 @@ export function mapToArray(map = {}) {
   return Object.keys(map).map((k) => ({ ...map[k] }));
 }
 
-const exportable = { arrayToMap, mapToArray }
-
-export default exportable;
+const planModel = { arrayToMap, mapToArray };
+export default planModel;

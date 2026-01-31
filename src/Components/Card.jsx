@@ -3,7 +3,7 @@ import { FaRupeeSign, FaMapMarkerAlt, FaRegCalendarAlt, FaRegThumbsDown } from '
 import { useInterested } from '../contexts/InterestedContext';
 import { toast } from 'react-toastify';
 
-const Card = ({ tour, removeTour, locked }) => {
+const Card = ({ tour, removeTour, lockItem, unlockItem, locked, presence }) => {
   const { addToInterested } = useInterested(); 
   const [readmore, setReadmore] = useState(false);
 

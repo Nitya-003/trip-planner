@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTheme } from "../contexts/ThemeContext";
 import { FaGoogle, FaApple } from "react-icons/fa";
@@ -233,19 +233,8 @@ export default function Login({ setIsLoggedIn }) {
             </p>
           </form>
         </div>
-      </div>
-
-      <ToastContainer
-        position="bottom-left"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+			</div>
+			
     </div>
   );
 }
