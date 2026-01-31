@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import "./HomeSplit.css"; // The styling is now handled by Tailwind
 import HeroSection from "../Components/Hero";
@@ -150,17 +150,6 @@ export default function HomeSplit({ setIsLoggedIn }) {
           </form>
         </div>
       </div>
-      {/* Toast Container */}
-      <ToastContainer
-        position="bottom-left"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="colored"
-      />
     </div>
   );
 }

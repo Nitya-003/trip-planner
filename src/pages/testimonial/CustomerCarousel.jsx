@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 
@@ -15,15 +15,15 @@ const CustomCarousel = ({ guides, viewprofilehandle, isHome = false }) => {
 		setCurrentIndex((prev) => (prev - 1 + guides.length) % guides.length);
 	};
 
-	const nextSlide = () => {
-		setCurrentIndex((prev) => (prev + 1) % guides.length);
-	};
+const nextSlide = useCallback(() => {
+  setCurrentIndex((prev) => (prev + 1) % guides.length);
+}, [guides.length]);
 
 	// Auto-move effect
 	useEffect(() => {
 		const timer = setInterval(nextSlide, AUTO_SLIDE_INTERVAL);
 		return () => clearInterval(timer);
-	}, [currentIndex, guides.length]);
+	}, [nextSlide]);
 
 	return (
 		<div className="carousel-container relative flex flex-col items-center">

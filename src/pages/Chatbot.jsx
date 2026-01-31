@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaPaperPlane, FaRobot, FaUser } from "react-icons/fa";
 import { useTheme } from "../contexts/ThemeContext";
 import { Loader2 } from "lucide-react";
-import { ToastContainer } from "react-toastify";
 import ReactMarkdown from "react-markdown";
 
 function ChatBot() {
@@ -209,18 +208,7 @@ function ChatBot() {
                     </div>
                 </div>
             </div>
-
-            <ToastContainer
-                position="bottom-left"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                pauseOnHover
-                draggable
-                theme="colored"
-            />
-
+						
             <style jsx>{`
         .fade-in {
           animation: fadeIn 0.4s ease-in-out;

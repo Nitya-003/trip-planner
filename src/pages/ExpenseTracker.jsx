@@ -89,7 +89,6 @@ const ExpenseTracker = () => {
   
   const totalSpent = expenses.reduce((acc, curr) => acc + curr.amount, 0);
 
-  const data = [];
   useEffect(() => {
       window.scrollTo(0, 0);
     }, []);

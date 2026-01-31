@@ -80,7 +80,18 @@ function App() {
   }
 
   return (
-    <InterestedProvider>
+		<InterestedProvider>
+				<ToastContainer
+         position="bottom-left"
+         autoClose={3000}
+         hideProgressBar={false}
+         newestOnTop={false}
+         closeOnClick
+         pauseOnFocusLoss
+         draggable
+         pauseOnHover
+         theme="colored"
+      />
       <div
         className={`relative z-10 bg-gray-100 dark:bg-gray-900 transition-colors duration-300 min-h-screen ${theme}`}
       >
@@ -404,12 +415,6 @@ function App() {
 
         <BackToTop />
 
-        <ToastContainer
-          position="bottom-left"
-          autoClose={3000}
-          pauseOnHover
-          theme="colored"
-        />
       </div>
     </InterestedProvider>
   );
