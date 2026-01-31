@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTheme } from "../contexts/ThemeContext";
 import {
     FaPlus,
@@ -14,7 +14,6 @@ import {
     FaFileAlt,
     FaCheck,
     FaCircle,
-    FaDownload,
 } from "react-icons/fa";
 
 export default function PackingChecklist() {

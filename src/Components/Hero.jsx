@@ -1,12 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useTheme } from "../contexts/ThemeContext";
-import { motion } from "framer-motion";
-import { Plane } from "lucide-react"; // optional icon for plane ✈️
 
 export default function HeroSection({ navigateTo }) {
   const navigate = useNavigate();
-  const { theme } = useTheme();
 
   const handleStartPlanningClick = () => {
     navigate(navigateTo || "/login");

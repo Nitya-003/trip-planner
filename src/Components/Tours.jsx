@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Card from './Card.jsx';
 import { useInterested } from '../contexts/InterestedContext';
 import {toast} from 'react-toastify'

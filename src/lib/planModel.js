@@ -11,4 +11,6 @@ export function mapToArray(map = {}) {
   return Object.keys(map).map((k) => ({ ...map[k] }));
 }
 
-export default { arrayToMap, mapToArray };
+const exportable = { arrayToMap, mapToArray }
+
+export default exportable;

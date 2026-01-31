@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useRef, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 // Assuming lucide-react is available for icons
 // Sun and Moon removed
 import { Search, Clock, MapPin, Download, Trash2, Plus, Loader2 } from 'lucide-react';
