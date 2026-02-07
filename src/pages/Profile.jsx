@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signOut, updateProfile } from "firebase/auth";
 import { auth, db } from "../firebase";
@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { FaSignOutAlt, FaEdit, FaSave, FaTimes } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import { doc, onSnapshot, setDoc } from "firebase/firestore";
+import { useInterested } from "../contexts/InterestedContext";
 
 const formatJoinDate = (timestamp) => {
   if (!timestamp) return "";
@@ -27,6 +28,7 @@ const Profile = () => {
   const [editInfo, setEditInfo] = useState({ name: "", location: "", bio: "" });
   const [profilePic, setProfilePic] = useState("");
   const [isEditing, setIsEditing] = useState(false);
+  const { visitedPlaces } = useInterested();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -386,13 +388,42 @@ const Profile = () => {
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center">
             <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-              8
+              {visitedPlaces.length}
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Countries Visited
+              Places Visited
             </p>
           </div>
         </div>
+
+        {visitedPlaces.length > 0 && (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+             <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+              My Travel Log
+            </h2>
+            <div className="space-y-4">
+              {visitedPlaces.map((place, index) => (
+                <div key={index} className="border-b dark:border-gray-700 pb-4 last:border-0">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h4 className="font-bold text-lg dark:text-white">{place.name}</h4>
+                      <div className="text-yellow-400 text-sm mb-1">
+                        {"★".repeat(place.review.rating)}
+                        <span className="text-gray-300">{"★".repeat(5 - place.review.rating)}</span>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">"{place.review.comment}"</p>
+                    </div>
+                    {place.review.visitAgain && (
+                      <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full dark:bg-green-900 dark:text-green-200">
+                        Wants to visit again
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Recent Activity */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">

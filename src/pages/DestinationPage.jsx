@@ -1,9 +1,10 @@
-import React from 'react';
+import { useState } from 'react';
 import { useParams, Link } from "react-router-dom";
 import data from '../data';
-import { FaMapMarkerAlt, FaRupeeSign, FaRegCalendarAlt, FaArrowLeft, FaTag } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaRupeeSign, FaRegCalendarAlt, FaArrowLeft, FaTag, FaCheckCircle } from 'react-icons/fa';
 import { useInterested } from '../contexts/InterestedContext';
 import { toast } from 'react-toastify';
+import ReviewModal from '../Components/ReviewModal';
 
 const Tag = ({ text, colorClass }) => (
   <span className={`text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full last:mr-0 mr-1 ${colorClass}`}>
@@ -13,7 +14,8 @@ const Tag = ({ text, colorClass }) => (
 
 export default function DestinationPage() {
   const { id } = useParams();
-  const { addToInterested } = useInterested();
+  const { addToInterested, markAsVisited } = useInterested();
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
 
   // Find the destination from the main data source
   const destination = data.find(d => d.name.toLowerCase() === id.toLowerCase());
@@ -21,6 +23,18 @@ export default function DestinationPage() {
   const handleAddToInterested = () => {
     addToInterested(destination);
     toast.success(`${destination.name} added to your interested list!`);
+  };
+
+  const handleMarkVisited = () => {
+    setIsReviewModalOpen(true);
+  };
+
+  const handleReviewSubmit = (reviewData) => {
+    markAsVisited(destination, reviewData);
+    toast.success(`Marked ${destination.name} as visited!`);
+    if(reviewData.visitAgain) {
+      toast.info(`Added to your "Visit Again" list!`);
+    }
   };
 
   if (!destination) {
@@ -45,6 +59,12 @@ export default function DestinationPage() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 animate-fadeIn">
+      <ReviewModal 
+        isOpen={isReviewModalOpen} 
+        onClose={() => setIsReviewModalOpen(false)}
+        onSubmit={handleReviewSubmit}
+        destinationName={destination.name}
+      />
       <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         {/* Header */}
         <div className="mb-8">
@@ -94,12 +114,21 @@ export default function DestinationPage() {
               </div>
             </div>
 
-            <button
-              onClick={handleAddToInterested}
-              className="w-full py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300"
-            >
-              I'm Interested
-            </button>
+            <div className="flex flex-col gap-3 mt-6">
+              <button
+                onClick={handleAddToInterested}
+                className="w-full py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300"
+              >
+                I'm Interested
+              </button>
+
+              <button
+                onClick={handleMarkVisited}
+                className="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 flex items-center justify-center gap-2"
+              >
+                <FaCheckCircle /> Mark as Visited
+              </button>
+            </div>
           </div>
         </div>
       </div>

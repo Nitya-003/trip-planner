@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaGithub, FaEnvelope, FaInstagram, FaLinkedinIn, FaPaperPlane } from "react-icons/fa";
 
