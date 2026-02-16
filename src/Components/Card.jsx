@@ -1,15 +1,22 @@
 import { useState } from 'react';
-import { FaRupeeSign, FaMapMarkerAlt, FaRegCalendarAlt, FaRegThumbsDown } from 'react-icons/fa';
+import { FaRupeeSign, FaMapMarkerAlt, FaRegCalendarAlt, FaRegThumbsDown, FaCheckCircle } from 'react-icons/fa';
 import { useInterested } from '../contexts/InterestedContext';
 import { toast } from 'react-toastify';
+import ReviewModal from './ReviewModal';
 
 const Card = ({ tour, removeTour, lockItem, unlockItem, locked, presence }) => {
-  const { addToInterested } = useInterested(); 
+  const { addToInterested, markAsVisited } = useInterested(); 
   const [readmore, setReadmore] = useState(false);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
 
   const description = readmore
     ? tour.info
     : `${tour.info.substring(0, 200)}...`;
+
+  const handleReviewSubmit = (reviewData) => {
+    markAsVisited(tour, reviewData);
+    toast.success(`Marked "${tour.name}" as visited!`);
+  };
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden border border-gray-100 dark:border-gray-700 group">
@@ -39,6 +46,15 @@ const Card = ({ tour, removeTour, lockItem, unlockItem, locked, presence }) => {
               {readmore ? 'Show Less' : 'Read More'}
             </span>
           </p>
+
+          <div className="mb-4 animate-fadeIn">
+              <button
+                onClick={() => setIsReviewModalOpen(true)}
+                className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20"
+              >
+                <FaCheckCircle /> Mark as Visited
+              </button>
+          </div>
           
           {/* Tags Section */}
           <div className="mb-4">
@@ -104,6 +120,13 @@ const Card = ({ tour, removeTour, lockItem, unlockItem, locked, presence }) => {
           </div>
         </div>
       </div>
+
+      <ReviewModal
+        isOpen={isReviewModalOpen}
+        onClose={() => setIsReviewModalOpen(false)}
+        onSubmit={handleReviewSubmit}
+        destinationName={tour.name}
+      />
     </div>
   );
 };
