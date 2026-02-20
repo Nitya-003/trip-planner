@@ -1,15 +1,15 @@
-**🌍 YourTripPlanner**
+<h1 align="center">🌍 YourTripPlanner</h1>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 <p align="center">
-<img src="https://img.shields.io/badge/GirlScript%20Summer%20of%20Code-2025-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/GirlScript%20Summer%20of%20Code-2025-orange?style=for-the-badge" />
   <a href="https://github.com/code-well0/trip-planner"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" /></a>
-  </p>
+</p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-> YourTripPlanner is a comprehensive travel discovery and planning website designed to help users explore popular Indian tourist destinations with ease. The platform includes smart destination filtering, an AI-powered travel assistant, and expense tracking tools — making travel planning simple, fun, and interactive.
+> **YourTripPlanner** is a comprehensive travel discovery and planning platform designed to help users explore popular Indian tourist destinations with ease. The platform includes smart destination filtering, an AI-powered travel assistant, real-time features, and expense tracking tools — making travel planning simple, fun, and interactive.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 <div align="center">
@@ -46,76 +46,55 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
-**Features**
+## ✨ Features
 
-***Destination Discovery***
-
-* Browse a curated list of popular Indian cities
-* Beautifully themed with cultural emojis
-* Seamless navigation and engaging UI
-
-***Smart Filtering***
-
-* Instantly filter destinations by region: North, South, East, West
-* Dynamic and user-friendly buttons
-
-***AI Travel Assistant***
-
-* **Powered by Google Gemini 2.0 Flash**
-* Get personalized travel suggestions, routes, local insights
-* Fast, intelligent, real-time chat with typing indicators
-
-**AI Powered Custom Itinerary***
-
-* **Powered by Google Gemini 2.0 Flash**
-* Get personalized itinerary daywise 
-* Fast, intelligent, real-time chat with typing indicators
-* Export to PDF functionality enables you to download multiday itinerary created.
-* Please do npm install jspdf for Export Itinerary
-
-***Expense Tracking***
-
-* Keep tabs on your travel budget
-* Add and monitor trip expenses with ease
+* 🗺️ **Destination Discovery & Smart Filtering:** Browse a curated list of popular Indian cities beautifully themed with cultural emojis. Instantly filter destinations by region (North, South, East, West).
+* 🤖 **AI Travel Assistant:** Powered by **Google Gemini 2.0 Flash**, get personalized travel suggestions, routes, and local insights via a fast, real-time chat interface.
+* 📅 **AI-Powered Custom Itinerary:** Generate day-wise personalized itineraries and download them as multi-day PDFs for offline use.
+* 💰 **Expense Tracking & Visualizations:** Keep tabs on your travel budget with interactive charts and trackers.
+* ⚡ **Real-Time Capabilities:** Built with WebSockets for real-time interactions.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
-<h2 align="center">Open Source Programmes </h2>
-<p align="center">
-  <b>This project is now OFFICIALLY accepted for:</b>
-</p>
+## 💻 Tech Stack
 
-![GSSoC Logo](https://github.com/code-well0/trip-planner/blob/main/public/images/gssoc%20logo.png)
+**Frontend:**
+* **React.js** – Component-based architecture
+* **TailwindCSS & CSS Flexbox** – Responsive and modern styling
+* **Framer Motion & GSAP** – Smooth UI animations
+* **Chart.js & Recharts** – Interactive expense visualizations
 
-**Exciting News...**
+**Backend:**
+* **Node.js & Express** – Scalable API service
+* **MongoDB & Mongoose** – Database management
+* **Socket.io** – Real-time event communication
 
-This project is now an official part of GirlScript Summer of Code – GSSoC'25! We're thrilled to welcome contributors from all over India and beyond to collaborate, build, and grow trip-planner! Let’s make learning and career development smarter – together! 
-
-GSSoC is one of India’s **largest 3-month-long open-source programs** that encourages developers of all levels to contribute to real-world projects while learning, collaborating, and growing together. 
-
-With **mentorship, community support**, and **collaborative coding**, it's the perfect platform for developers to:
-
-- Improve their skills
-- Contribute to impactful projects
-- Get recognized for their work
-- Receive certificates and swag!
-
-**I can’t wait to welcome new contributors** from GSSoC 2025 to this trip-planner project family! Let's build, learn, and grow together — one commit at a time. 
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
-
-**Tech Stack**
-
-* **React.js** – Component-based front-end architecture
-* **CSS Flexbox** – Clean and responsive UI design
-* **JavaScript (ES6+)** – Modern web functionality
-* **Google Gemini 2.0 Flash** – AI integration for chatbot
-* **Node.js + Express** – Backend API service
-* **Vercel** – Lightning-fast hosting & deployment
+**AI & Integrations:**
+* **Google Gemini 2.0 Flash** – Generative AI for itineraries and chat
+* **Firebase & Passport.js** – Authentication handling
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-**🚀 Getting Started**
+## 📂 Project Structure
+
+```plaintext
+trip-planner/
+├── public/                # Static files (HTML, images, favicon)
+├── src/                   # Core React frontend source code
+│   ├── Components/        # Reusable UI components (Navbar, Footer, Cards)
+│   ├── pages/             # React pages (Home, Signup, PlanTrip, etc.)
+│   └── index.js           # Entry point for React application
+├── backend/               # Node/Express backend server & APIs
+├── .vscode/               # Editor-specific workspace settings
+├── GEMINI_SETUP.md        # AI Configuration guide
+├── CONTRIBUTING.md        # Detailed contribution guidelines
+└── README.md              # Project overview
+```
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## 🚀 Getting Started
+Follow these instructions to set up the project locally.
 
 ***1. Clone the repository:***
 
@@ -126,56 +105,68 @@ With **mentorship, community support**, and **collaborative coding**, it's the p
 
 ***2. Install dependencies:***
 
+  Open a terminal in the root directory and install the React dependencies:
    ```bash
    npm install
    ```
-
-***3. Start the development server:***
-
+  Start the development server:
    ```bash
    npm start
    ```
+***3. Backend Setup:***
+  Open a new terminal window, navigate to the backend folder, and install its dependencies:
+  ```bash
+  cd backend
+  npm install
+  ```
+  Start the backend server:
+  ```bash
+  npm start
+  ```
 
-***4. To configure the Gemini AI Assistant, refer to:***
+***4. Configuration:***
 
+  To configure the Gemini AI Assistant, refer to:
    * [GEMINI\_SETUP.md](./GEMINI_SETUP.md)
-
-***5. Visit the site:***
-
+  Visit the site:
    * [Live Demo](https://trip-planner-sable-eight.vercel.app/)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 align="center">Open Source Programmes </h2>
+<p align="center">
+  <b>This project is now OFFICIALLY accepted for:</b>
+</p>
+
+<p align="center">
+  <a href="https://gssoc.girlscript.tech/"><img src="https://miro.medium.com/v2/resize:fit:560/0*loJWZJrLBa-0R_gH" width="180px" alt="GSSoC 2025"></a>
+  <a href="https://dscwoc.dscvitb.in/"><img src="https://dscwoc.dscvitb.in/dscwoc-navbar-logo.png" width="180px" alt="DSCWoC'26"></a>
+</p>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
 **Contributing**
 
 We welcome contributions from everyone, especially participants of **GSSoC’25**! 
 
 To contribute:
-* Fork the repository
-* Create a new branch: `git checkout -b feature-name`
-* Make your changes and commit: `git commit -m "Added new feature"`
-* Push to your fork: `git push origin feature-name`
-* Create a Pull Request
+1. Fork the repository and **Clone** your fork
+2. Create a new branch: `git checkout -b feature-name`
+3. Make your changes and commit: `git commit -m "Added new feature"`
+4. Push to your fork: `git push origin feature-name`
+5. Open a **Pull Request**
+
+For detailed instructions and community standards, please check our [CONTRIBUTING.md](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 **Acknowledgements**
 
 - Thanks to all contributors of this project 
-- Special shoutout to **GirlScript Summer of Code (GSSoC’25)** for the amazing community and support!
+- Special shoutout to **GSSoC** and **DSCWoC** for the amazing community and support!
 - Built with dedication, collaboration, and lots of chai 
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-**Code of Conduct**
-
-Please refer to the [`Code of Conduct`](https://github.com/code-well0/trip-planner/blob/main/CODE_OF_CONDUCT.md) for details on contributing guidelines and community standards.
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-**Contribution Guidelines**
-
-We love our contributors! If you'd like to help, please check out our [`CONTRIBUTE.md`](https://github.com/code-well0/trip-planner/blob/main/CONTRIBUTING.md) file for guidelines.
 
 >Thank you once again to all our contributors who has contributed to **trip-planner!** Your efforts are truly appreciated.
 
@@ -200,15 +191,15 @@ Feel free to open issues or discussions if you have any feedback, feature sugges
 
 **📄 License**
 
-This project is licensed under the MIT License - see the [`License`](https://github.com/code-well0/trip-planner/blob/main/License.md) file for details.
+This project is licensed under the MIT License - see the [`License`](./License.md) file for details.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
-<h2 align="center">🧑‍💻Project Admin:</h2>
-<table>
+<h2 align="center">🧑‍💻 Maintainers & Acknowledgements</h2>
+<table align="center">
 <tr>
-<td align="center">
-<a href="https://github.com/code-well0"><img src="https://avatars.githubusercontent.com/u/146579950?v=4" height="140px" width="140px" alt="Shubrali jain"></a><br><sub><b>Shubrali jain</b><br><a href="https://www.linkedin.com/in/shubrali-jain/"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73993775/278833250-adb040ea-e3ef-446e-bcd4-3e8d7d4c0176.png" width="45px" height="45px"></a></sub>
+<td>
+<a href="https://github.com/code-well0"><img src="https://avatars.githubusercontent.com/u/146579950?v=4" height="140px" width="140px" alt="Shubrali jain"></a><br><sub><b>Shubrali Jain (Project Admin)</b><br><a href="https://www.linkedin.com/in/shubrali-jain/"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73993775/278833250-adb040ea-e3ef-446e-bcd4-3e8d7d4c0176.png" width="45px" height="45px"></a></sub>
 </td>
 </tr>
 </table>
@@ -243,4 +234,3 @@ This project is licensed under the MIT License - see the [`License`](https://git
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=65&section=footer"/>
 
 > **"Travel is the only thing you buy that makes you richer." Ready to show off your coding achievements? Get started with trip-planner today! 🚀**
-
