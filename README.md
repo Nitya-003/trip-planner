@@ -1,21 +1,10 @@
 <h1 align="center">🌍 YourTripPlanner</h1>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<p align="center">
-  <img src="https://img.shields.io/badge/GirlScript%20Summer%20of%20Code-2025-orange?style=for-the-badge" />
-  <a href="https://github.com/code-well0/trip-planner"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" /></a>
-</p>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
 > **YourTripPlanner** is a comprehensive travel discovery and planning platform designed to help users explore popular Indian tourist destinations with ease. The platform includes smart destination filtering, an AI-powered travel assistant, real-time features, and expense tracking tools — making travel planning simple, fun, and interactive.
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=00C853&center=true&vCenter=true&width=900&lines=Thanks+for+visiting+trip-planner!+🙌;Start+the+repo+✅;Share+it+with+others+🌍;Contribute+and+grow+🛠️;Happy+Coding+✨!" alt="Thanks Banner Typing SVG" />
 </div>
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
 **📊 Project Insights**
 
@@ -232,5 +221,6 @@ This project is licensed under the MIT License - see the [`License`](./License.m
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=65&section=footer"/>
+
 
 > **"Travel is the only thing you buy that makes you richer." Ready to show off your coding achievements? Get started with trip-planner today! 🚀**
